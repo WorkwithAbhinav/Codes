@@ -47,7 +47,7 @@ export default function About() {
               Accordion Item #2
             </button>
           </h2>
-          {/* <div
+          <div
             id="collapseTwo"
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
@@ -62,7 +62,7 @@ export default function About() {
               about any HTML can go within the <code>.accordion-body</code>,
               though the transition does limit overflow.
             </div>
-          </div> */}
+          </div>
         </div>
         
       </div>
