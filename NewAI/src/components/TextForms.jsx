@@ -2,7 +2,36 @@ import { useState } from "react";
 import React from "react";
 
 export default function TextForms(props) {
+  const [Text, replaceText] = useState("Enter Text...");
 
+  const upc = () => {
+    let newtext = Text.toUpperCase();
+    replaceText(newtext);
+    props.showalert("Converted to uppercase", "success");
+
+  };
+
+  const handelchange = (evt) => {
+    replaceText(evt.target.value);
+  };
+  const hovertext = () => {
+    if (Text === "Enter Text...") {
+      replaceText("");
+    }
+  };
+  const clearter = () => {
+    replaceText("Enter Text...");
+  };
+  const lwc = () => {
+    let lowertext = Text.toLowerCase();
+    replaceText(lowertext);
+    props.showalert("Converted to lowercase", "success");
+
+  };
+  const removespace = () => {
+    let ns = Text.split(" ").join("");
+    replaceText(ns);
+  };
 
   return (
     <>
