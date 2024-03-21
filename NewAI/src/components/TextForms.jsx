@@ -22,8 +22,30 @@ export default function TextForms(props) {
         ></textarea>
       </div>
 
+      <button type="button" className="btn btn-primary mx-2" onClick={upc}>
+        TO UPPERCASE
+      </button>
+      <button type="button" className="btn btn-secondary mx-2" onClick={lwc}>
+        to lowercase
+      </button>
+      <button
+        type="button"
+        className="btn btn-success mx-2"
+        onClick={removespace}
+      >
+        NoSpace
+      </button>
+      <button type="button" className="btn btn-danger mx-2" onClick={clearter}>
+        Clear
+      </button>
     </div>
-
+    <div className="container my-3">
+      <h2>Text Summary 
+      </h2>
+      <p className="font-size-32 fw-bold"> ~ {Text.split(" ").filter((elem)=>{return elem.length!=0}).length} Words and {Text.length} Characters</p>
+      <h2>Preview</h2>
+      <p>{Text}</p>
+    </div>
     </>
   );
 }
