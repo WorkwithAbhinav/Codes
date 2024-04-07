@@ -26,7 +26,12 @@ const Collaboration = () => {
           </ul>
           <Buttons>Try it now</Buttons>
         </div>
-        
+        <div className="lg:ml-auto xl:w-[38rem]  mt-4">
+          <p className="body-2 mb-4 text-n-4 md:mb-8 lg:w-[22rem] lg:mx-auto">
+            {collabText}
+          </p>
+          
+        </div>
       </div>
     </Section>
   );
