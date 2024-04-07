@@ -30,7 +30,28 @@ const Collaboration = () => {
           <p className="body-2 mb-4 text-n-4 md:mb-8 lg:w-[22rem] lg:mx-auto">
             {collabText}
           </p>
-          
+          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-n-6  rounded-full -translate-x-1/2 scale-75 md:scale-100">
+            <div className="flex w-60 aspect-square rounded-full border border-n-6 m-auto">
+              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full ">
+                <div className="justify-center flex items-center w-full h-full bg-n-8  rounded-full">
+                  <img src={brainwaveSymbol} width={48} height={48} alt="" />
+                </div>
+              </div>
+            </div>
+            <ul>
+                {collabApps.map((app,index)=>(
+                    <li key={app.id}
+                    className={`absolute top-0 rotate-${index*45} left-1/2 origin-bottom h-1/2 -ml-[1.6rem]`}>
+                        <div className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-n-7 border border-n-1/15 rounded-xl -rotate-${index*45}`}><img src={app.icon} 
+                        className="m-auto"
+                        height={app.height}
+                        width={app.width} alt="" /></div>
+                    </li>
+                ))}
+            </ul>
+            <LeftCurve />
+            <RightCurve />
+          </div>
         </div>
       </div>
     </Section>
