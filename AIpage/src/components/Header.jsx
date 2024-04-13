@@ -9,7 +9,25 @@ import { disablePageScroll } from "scroll-lock";
 import { enablePageScroll } from "scroll-lock";
 
 const Header = () => {
-
+    const currpath = useLocation();
+    const [openNev, setOpenNev] = useState(false)
+  
+    const togglefx = ()=>{
+      if(openNev){
+          setOpenNev(false);
+          enablePageScroll();
+  
+      }else{
+          setOpenNev(true);
+          disablePageScroll();
+      }
+    }
+    const handelclick =() =>{
+      if(!openNev) return ;
+  
+      enablePageScroll();
+      setOpenNev(false);
+    }
     return (
       <div className={`fixed z-50 top-0 left-0 w-full  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNev} ? 'bg-n-8' : 'bg-n-8/90 backdrop-blur-sm'`}>
         <div className="flex items-center px-5 lg:px-5 xl:px-10 max-lg:py-4 ">
