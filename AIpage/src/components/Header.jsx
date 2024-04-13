@@ -37,7 +37,18 @@ const Header = () => {
             </div>
               <HamburgerMenu/>
           </nav>
-          
+          <a
+            href="#signup"
+            className="button hidden lg:block text-n-1/50 mr-8 transition-colors hover:text-n-1"
+          >
+            New Account
+          </a>
+          <Buttons className="hidden lg:flex " href="#login">
+            Log in
+          </Buttons>
+          <Buttons className="ml-auto lg:hidden" px="px-3" onClick={togglefx}>
+              <MenuSvg openNavigation = {openNev}/>
+          </Buttons>
         </div>
       </div>
     );
