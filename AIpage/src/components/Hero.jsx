@@ -3,7 +3,10 @@ import Section from "./Section";
 import Buttons from "./Buttons";
 
 import { BottomLine } from "../components/design/Hero"
-
+import { BackgroundCircles } from "../components/design/Hero";
+import { Gradient } from "../components/design/Hero";
+import { heroIcons } from "../constants"
+import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Generating from "./Generating";
 import CompanyLogos from "./CompanyLogos";
@@ -38,8 +41,20 @@ const Hero = () => {
           </p>
           <Buttons href="/pricing">Get Started</Buttons>
         </div>
-        
-        
+        <div className="relative max-w-[23rem] mx-auto xl:mb-24 md:max-w-5xl">
+          <div className="relative z-1 rounded-2xl bg-conic-gradient p-0.5">
+            <div className="relative bg-n-8 rounded-[1rem]">
+              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
+             
+            </div>
+            <Gradient />
+          </div>
+          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
+            <img src={heroBackground} width={1440} height={1800} />
+          </div>
+          <BackgroundCircles />
+        </div>
+        <CompanyLogos className="hidden lg:block z-10 mt-20 relative"/>
       </div>
       <BottomLine/>
     </Section>
