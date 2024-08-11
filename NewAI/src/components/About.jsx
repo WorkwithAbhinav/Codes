@@ -66,7 +66,7 @@ export default function About() {
         </div>
         <div className="accordion-item">
           <h2 className="accordion-header">
-          <button
+            <button
               className="accordion-button collapsed"
               type="button"
               data-bs-toggle="collapse"
